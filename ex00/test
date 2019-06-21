@@ -1,0 +1,93 @@
+EX_PATH="../cmake-build-debug"
+COLOR_RED='\e[31m'
+COLOR_GREEN='\e[32m'
+COLOR_CLEAR='\e[0m'
+
+
+#EMPTY INPUT TEST
+YOUR=$($EX_PATH/ex00)
+TEST="* LOUD AND UNBEARABLE FEEDBACK NOISE *"
+
+if [ "$YOUR" = "$TEST" ];
+then
+    printf $COLOR_GREEN
+    echo 'test 1 SUCCESS';
+    printf $COLOR_CLEAR
+else
+    printf $COLOR_RED
+    echo 'test 1 FAIL';
+    printf $COLOR_CLEAR
+    echo "\t>>> $YOUR \n\t<<<$TEST" | cat -e
+    exit 0;
+fi
+
+#GOOD INPUT TEST
+
+CASE="QSdasdQ"
+YOUR=$($EX_PATH/ex00 $CASE)
+TEST=$(echo "$CASE" | tr  '[:lower:]' '[:upper:]')
+
+if [ "$YOUR" = "$TEST" ];
+then
+    printf $COLOR_GREEN
+    echo 'test 2 SUCCESS';
+    printf $COLOR_CLEAR
+else
+    printf $COLOR_RED
+    echo 'test 2 FAIL';
+    printf $COLOR_CLEAR
+    echo "\t>>>$YOUR\n\t<<<$TEST" | cat -e
+    exit 0;
+fi
+
+
+CASE="shhhhh... I think the students are asleep..."
+YOUR=$($EX_PATH/ex00 $CASE)
+TEST=$(echo "$CASE" | tr  '[:lower:]' '[:upper:]')
+
+if [ "$YOUR" = "$TEST" ];
+then
+    printf $COLOR_GREEN
+    echo 'test 3 SUCCESS';
+    printf $COLOR_CLEAR
+else
+    printf $COLOR_RED
+    echo 'test 3 FAIL';
+    printf $COLOR_CLEAR
+    echo "\t>>>$YOUR\n\t<<<$TEST" | cat -e
+    exit 0;
+fi
+
+CASE="0000"
+YOUR=$($EX_PATH/ex00 $CASE)
+TEST=$(echo "$CASE" | tr  '[:lower:]' '[:upper:]')
+
+if [ "$YOUR" = "$TEST" ];
+then
+    printf $COLOR_GREEN
+    echo 'test 4 SUCCESS';
+    printf $COLOR_CLEAR
+else
+    printf $COLOR_RED
+    echo 'test 4 FAIL';
+    printf $COLOR_CLEAR
+    echo "\t>>>$YOUR\n\t<<<$TEST" | cat -e
+    exit 0;
+fi
+
+CASE="aaaaaAAAAA zzzzzZZZZZ"
+YOUR=$($EX_PATH/ex00 $CASE)
+TEST=$(echo "$CASE" | tr  '[:lower:]' '[:upper:]')
+
+if [ "$YOUR" = "$TEST" ];
+then
+    printf $COLOR_GREEN
+    echo 'test 4 SUCCESS';
+    printf $COLOR_CLEAR
+else
+    printf $COLOR_RED
+    echo 'test 4 FAIL';
+    printf $COLOR_CLEAR
+    echo "\t>>>$YOUR\n\t<<<$TEST" | cat -e
+    exit 0;
+fi
