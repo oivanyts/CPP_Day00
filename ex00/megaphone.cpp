@@ -17,7 +17,10 @@ int			main(int ac, char *av[])
 			{
 				cout << static_cast<char>(toupper(str.at(j)));
 			}
-			(i + 1 < ac) ? cout << " " : nullptr;
+			if (i + 1 < ac)
+			{
+				cout << " " ;
+			}
 		}
 		cout << endl;
 	}

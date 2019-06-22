@@ -2,7 +2,7 @@
 // Created by Oleh IVANYTSKYI on 2019-06-20.
 //
 
-#include "Contact.hpp"
+#include "../includes/Contact.hpp"
 
 
 void	Contact::setField( u_int8_t n, std::string &data)
@@ -47,7 +47,7 @@ void	Contact::setField( u_int8_t n, std::string &data)
 			return ;
 	}
 }
-std::string Contact::getField(uint8_t n)
+std::string Contact::getField(uint8_t n) const
 {
 	switch (n)
 	{

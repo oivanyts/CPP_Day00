@@ -9,18 +9,4 @@
 #include <string>
 #include "PhoneBook.hpp"
 
-using std::cout;
-using std::cin;
-using std::endl;
-
-enum Commands
-{
-	EXIT,
-	ADD,
-	SEARCH
-};
-
-
-
-
 #endif //CPP_DAY00_MAIN_HPP

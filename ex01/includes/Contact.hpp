@@ -11,9 +11,9 @@ class Contact {
 
 public:
 
-	std::string getField(u_int8_t n);
+	std::string getField(u_int8_t n) const ;
 	void		setField( u_int8_t n, std::string &data);
-	void		fitField(std::string &data);
+	static void	fitField(std::string &data);
 
 private:
 	std::string	_firstName;

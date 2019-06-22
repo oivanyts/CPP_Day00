@@ -12,8 +12,8 @@ class	View
 {
 
 public:
-	View();
-	View(const Model &model);
+		View();
+		View(const Model &model);
 	void SetModel(const Model &model);
 	void Render();
 private:

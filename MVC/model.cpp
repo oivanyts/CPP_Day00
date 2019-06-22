@@ -7,14 +7,12 @@ Model::Model()
 {
 	this->_data = "";
 	this->_event = nullptr;
-	return ;
 }
 
 Model::Model( const std::string &data )
 {
 	this->_event = nullptr;
 	this->setData(data);
-	return ;
 }
 
 void	Model::setData( const std::string &data )
