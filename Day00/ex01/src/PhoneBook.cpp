@@ -30,7 +30,9 @@ void PhoneBook::mAdd()
 	{
 		std::cout << "enter field " << this->fieldNames[i + 1] << std::endl;
 		std::getline (std::cin, ret);
-		all[this->capacity].setField(i, ret);
+		if (std::cin.eof() || std::cin.bad())
+			return ;
+		this->all[this->capacity].setField(i, ret);
 	}
 	this->capacity++;
 	std::cout << "CONTACT UPLOADED" << std::endl;
@@ -100,7 +102,12 @@ void PhoneBook::mSearch() const
 	while (1)
 	{
 		std::cin >> n;
-		if(std::cin.fail() || !n || n > this->capacity)
+
+		if (std::cin.bad() || std::cin.eof())
+		{
+			return ;
+		}
+		else if (std::cin.fail() || !n || n > this->capacity)
 		{
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -124,9 +131,10 @@ void PhoneBook::manageBook()
 		std::cout << "Please, enter command: [ ADD | SEARCH | EXIT ]" <<
 		std::endl;
 		getline ( std::cin, command, '\n');
-		if ("EXIT" == command)
+		if (!std::cin)
 		{
-			break ;
+			std::cout << "ERROR" << std::endl;
+			return ;
 		}
 		else if ("ADD" == command)
 		{
@@ -149,7 +157,10 @@ void PhoneBook::manageBook()
 			{
 				std::cout << "PHONEBOOK is empty" << std::endl;
 			}
-
+		}
+		else if ("EXIT" == command)
+		{
+			break ;
 		}
 	}
 }

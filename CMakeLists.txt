@@ -21,8 +21,12 @@ add_executable(demoMVC
         MVC/view.hpp
         MVC/model.hpp
         MVC/controller.cpp
-        MVC/controller.hpp)
+        MVC/controller.hpp Day01/ex00/pony.cpp Day01/ex00/pony.hpp Day01/ex00/main.cpp)
 add_executable(ex02
         Day00/ex02/Account.class.cpp
         Day00/ex02/Account.class.hpp
         Day00/ex02/tests.cpp)
+add_executable(ex00_01
+        Day01/ex00/pony.hpp
+        Day01/ex00/pony.cpp
+        Day01/ex00/main.cpp)
