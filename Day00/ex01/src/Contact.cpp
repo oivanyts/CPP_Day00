@@ -7,7 +7,7 @@
 
 void	Contact::setField( u_int8_t n, std::string &data)
 {
-	fitField(data);
+//	fitField(data);
 	switch (n)
 	{
 		case 0:
@@ -78,10 +78,11 @@ std::string Contact::getField(uint8_t n) const
 	}
 }
 
-void Contact::fitField( std::string &data )
+std::string Contact::fitField( std::string data )
 {
 	if (data.length() > 10)
 		data.insert(9,1,'.');
 	if (data.length() >= 10)
 		data.resize(10);
+	return data;
 }

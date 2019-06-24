@@ -13,7 +13,7 @@ public:
 
 	std::string getField(u_int8_t n) const ;
 	void		setField( u_int8_t n, std::string &data);
-	static void	fitField(std::string &data);
+	static std::string fitField( std::string data);
 
 private:
 	std::string	_firstName;

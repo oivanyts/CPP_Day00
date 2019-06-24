@@ -1,8 +1,14 @@
-NAME 		    = megaphone
+NAME 		    = phoneBook
 
-SRC             = megaphone.cpp
+SRC_DIR         := ./src/
+OBJ_DIR 	    := ./obj/
+INC_DIR 	    := ./includes/
 
-CC              := g++
+SRC             += Contact.cpp
+SRC             += main.cpp
+SRC             += PhoneBook.cpp
+
+CC              := clang++
 
 INCLUDES 	    := $(addprefix $(INC_DIR), $(SRC:.cpp=.hpp))
 
@@ -16,18 +22,24 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo compiling $@;
-	@$(CC) $(OBJ) -o $(NAME) $(FLAGS)
+	$(CC) $(OBJ) -o $(NAME) $(FLAGS)
 	@echo "\033[01;48;05;22m DONE \033[m [$(NAME)]"
 
-%.o: %.cpp
+$(OBJ): | $(OBJ_DIR)
+
+$(OBJ_DIR):
+	mkdir $(OBJ_DIR)
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(INC_DIR)%.hpp
 	@echo compiling $@;
-	@ $(CC) -c $< -o $@ $(FLAGS);
+	$(CC) -c $< -o $@ $(FLAGS) $(HEADER_FLAGS);
 
 clean:
 	@rm -f $(OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm -rf $(OBJ_DIR)
 	@echo "\033[01;48;05;160m fclean succsed \033[m [$(NAME)]"
 
 re: fclean all

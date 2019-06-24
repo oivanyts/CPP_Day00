@@ -15,18 +15,20 @@ public:
 
 	PhoneBook();
 
-	void 		mAdd();
-	void 		mSearch();
-	void		mOutput( bool allBook, u_int8_t n );
-	void 		mOutputOne( u_int8_t n, u_int8_t nFields );
 	void 		manageBook();
-	void 		mHeader( u_int8_t nFields );
-
 
 private:
+
+	void 		mAdd();
+	void 		mSearch() const;
+	void		mOutput( bool allBook, u_int8_t n ) const;
+	void 		mHeader( u_int8_t nFields ) const;
+	void		mOutputOne( u_int8_t n, u_int8_t nFields, bool outputShort )
+					const;
 	u_int8_t	capacity;
 	Contact		all[8];
 	std::string	fieldNames[12];
+
 };
 
 
