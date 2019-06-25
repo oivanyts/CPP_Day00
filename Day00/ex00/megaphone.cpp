@@ -17,10 +17,6 @@ int			main(int ac, char *av[])
 			{
 				cout << static_cast<char>(toupper(str.at(j)));
 			}
-			if (i + 1 < ac)
-			{
-				cout << " " ;
-			}
 		}
 		cout << endl;
 	}

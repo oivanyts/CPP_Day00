@@ -3,17 +3,32 @@
 //
 
 #include "pony.hpp"
-#include <iostream>
-#include <string>
+
+void		ponyOnTheStack(std::string name)
+{
+	Pony	stackPony(name);
+
+	std::cout << stackPony.getName() << " lived fun but short live"<< std::endl;
+}
+
+void		ponyOnTheHeap(std::string name)
+{
+	Pony		*heapPony = new Pony(name);
+	std::string	ret;
+	(void)heapPony;
+
+	std::cout << heapPony->getName() << " lives until you press Ctrl+D"
+				<< std:: endl;
+	while (std::cin >> ret)
+	{
+		std::cout << heapPony->getName() << " doig fine" << std::endl;
+	}
+	delete heapPony;
+}
 
 int main()
 {
-	Pony	heapp = Pony::ponyOnTheStack("STACK");
-	Pony	*stackk = Pony::ponyOnTheHeap("HEAP");
-
-	std::cout << "something" << std::endl;
-
-	delete stackk;
-	system("leaks -q ex00_01");
+	ponyOnTheStack("STACK");
+	ponyOnTheHeap("HEAP");
 	return (0);
 }

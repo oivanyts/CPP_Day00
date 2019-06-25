@@ -3,33 +3,44 @@
 //
 
 #include "pony.hpp"
-
-
-//Pony::Pony()
-//{
-//	std::cout << "ccc" << std::endl;
-//}
+void Pony::ponyDied()
+{
+	std::cout << "Pony " << this->_name
+				<< " died.\n Press \"F\" to pay respect" << std::endl;
+}
 
 Pony::~Pony()
 {
-	std::cout << "ddd" << std::endl;
+	this->ponyDied();
+	return ;
 }
 
 
 Pony::Pony( std::string name ) : _name(name)
 {
-	std::cout << "ccc" << name <<  std::endl;
+	Pony::showPony();
+	return ;
 }
 
-Pony Pony::ponyOnTheStack( std::string name )
+void Pony::showPony()
 {
-	return Pony(name);
+	std::cout << "Hello! My name is " << this->_name << std::endl;
+	std::cout << ".. . . . . . . .____\n"
+				 "... . . . . .__/. . \\__\n"
+				 ".. . . . . . ./| .`◕ \\\n"
+				 "... _——————///. . .___|\n"
+				 "..///.ó. . . / . /\n"
+				 ".////ó.ó.__./ . /\n"
+				 ".///\\. /\\ .\\ . /\\\n"
+				 ".\\| / / |.|./ /\\.\\\n"
+				 "./ /_//_/ /_/./_/" << std::endl;
 }
 
-Pony *Pony::ponyOnTheHeap( std::string name )
+const std::string &Pony::getName() const
 {
-	return (new Pony(name));
+	return _name;
 }
+
 
 
 

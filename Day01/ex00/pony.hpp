@@ -12,14 +12,15 @@ class Pony
 {
 public:
 
-	static Pony		ponyOnTheStack(std::string name);
-	static Pony		*ponyOnTheHeap(std::string name);
 	~Pony();
+	Pony(std::string name);
+
+	const std::string	&getName() const;
+	void				showPony();
+	void				ponyDied();
 
 private:
-	std::string	_name;
-	Pony(std::string name);
-	char	*mem;
+	std::string			_name;
 };
 
 
