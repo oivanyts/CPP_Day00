@@ -9,19 +9,19 @@
 
 void Human::meleeAttack( std::string const &target )
 {
-	std::cout << "*hits by hand*" << target <<std::endl;
+	std::cout << "*hits by hand* >" << target <<std::endl;
 
 }
 
 void Human::rangedAttack( std::string const &target )
 {
-	std::cout << "*hits by arrow*" << target << std::endl;
+	std::cout << "*hits by arrow* " << target << std::endl;
 
 }
 
 void Human::intimidatingShout( std::string const &target )
 {
-	std::cout << "*GLORY TO UKRAINE*" << target << std::endl;
+	std::cout << "*GLORY TO UKRAINE* " << target << std::endl;
 }
 
 
@@ -29,8 +29,8 @@ void Human::action( std::string const &action_name, std::string const &target )
 {
 	for (int i = 0; i < 3; i++)
 	{
-		if (!action_name.compare(act_tab[i]))
-			(this->*func[i])(target);
+		!(action_name.compare(act_tab[i])) ? (this->*func[i])(target) :
+		(void)0;
 	}
 }
 

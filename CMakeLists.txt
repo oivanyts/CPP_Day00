@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 98)
 
 #add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
 add_executable(d00e00
-        Day00/ex00/megaphone.cpp )
+        Day00/ex00/megaphone.cpp)
 add_executable(d00e01
         Day00/ex01/src/main.cpp
         Day00/ex01/src/PhoneBook.cpp
@@ -58,8 +58,18 @@ add_executable(d01e06
         Day01/ex06/main.cpp)
 
 add_executable(d01e07 Day01/ex07/main.cpp)
+
 add_executable(d01e08
         Day01/ex08/Human.cpp
         Day01/ex08/Human.hpp
         Day01/ex08/main.cpp)
+
+add_executable(d01e09
+        Day01/ex09/Logger.cpp
+        Day01/ex09/Logger.hpp
+        Day01/ex09/main.cpp)
+
+add_executable(d01e10
+        Day01/ex10/main.cpp Day02/ex00/Fixed.cpp Day02/ex00/Fixed.hpp)
+
 

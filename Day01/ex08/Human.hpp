@@ -15,8 +15,8 @@ private:
 	void meleeAttack(std::string const & target);
 	void rangedAttack(std::string const & target);
 	void intimidatingShout(std::string const & target);
-	typedef void (Human::*FunctionCallback)(std::string const &target);
 	std::string act_tab[3];
+	typedef void (Human::*FunctionCallback)(std::string const &target);
 	FunctionCallback func[3];
 public:
 
