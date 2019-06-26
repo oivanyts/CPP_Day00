@@ -2,7 +2,7 @@
 // Created by Oleh IVANYTSKYI on 2019-06-24.
 //
 
-#include "pony.hpp"
+#include "Pony.hpp"
 void Pony::ponyDied()
 {
 	std::cout << "Pony " << this->_name

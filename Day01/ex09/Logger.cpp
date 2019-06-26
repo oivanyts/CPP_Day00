@@ -17,7 +17,7 @@ void Logger::logToConsole( std::string const &input )
 void Logger::logToFile( std::string const &input )
 {
 	std::ofstream	logFile("logfile", std::ios::app);
-	if (logFile.bad() ||  logFile.fail() || !logFile.is_open())
+	if (!logFile.good() || !logFile.is_open())
 	{
 		std::cout << "ERROR: logfile fails" << std::endl;
 		return ;

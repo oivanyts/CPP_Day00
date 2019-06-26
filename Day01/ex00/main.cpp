@@ -2,13 +2,13 @@
 // Created by Oleh IVANYTSKYI on 2019-06-24.
 //
 
-#include "pony.hpp"
+#include "Pony.hpp"
 
 void		ponyOnTheStack(std::string name)
 {
 	Pony	stackPony(name);
 
-	std::cout << stackPony.getName() << " lived fun but short live"<< std::endl;
+	std::cout << stackPony.getName() << " is a anti-vax pony so it leaves short live"<< std::endl;
 }
 
 void		ponyOnTheHeap(std::string name)

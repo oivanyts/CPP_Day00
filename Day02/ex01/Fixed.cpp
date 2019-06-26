@@ -4,47 +4,40 @@
 
 #include <iostream>
 #include "Fixed.hpp"
-#include <math.h>
+#include <cmath>
 
-Fixed::Fixed() : _value(0)
-{
+Fixed::Fixed() : _value(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::~Fixed()
-{
+Fixed::~Fixed() {
 	std::cout << "DefDestructor" << std::endl;
 }
 
-int Fixed::getRawBits( void ) const
-{
-    std::cout << "getRawBits member function called" << std::endl;
+int Fixed::getRawBits(void) const {
+	std::cout << "getRawBits member function called" << std::endl;
 	return _value;
 }
 
-void Fixed::setRawBits( int const raw )
-{
-    _value = raw;
+void Fixed::setRawBits(int const raw) {
+	_value = raw;
 }
 
-Fixed &Fixed::operator=( Fixed const &rhs )
-{
-    std::cout << "Assignation operator called" << std::endl;
+Fixed &Fixed::operator=(Fixed const &rhs) {
+	std::cout << "Assignation operator called" << std::endl;
 	this->_value = rhs.getValue();
 	return *this;
 }
 
-Fixed::Fixed( Fixed const &src )
-{
-    std::cout << "Copy constructor called" << std::endl;
-    *this = src;
+Fixed::Fixed(Fixed const &src) {
+	std::cout << "Copy constructor called" << std::endl;
+	*this = src;
 
-    return ;
+	return;
 }
 
-int Fixed::getValue() const
-{
-    return _value;
+int Fixed::getValue() const {
+	return _value;
 }
 
 Fixed::Fixed(const int value) {
@@ -54,11 +47,11 @@ Fixed::Fixed(const int value) {
 
 Fixed::Fixed(const float value) {
 	this->_value = roundf(value * (1 << _bits));
-	std::cout << "Float constructor called" << (value * (1 << _bits)) << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 }
 
 float Fixed::toFloat(void) const {
-	return ((float)this->_value / (1 << _bits));
+	return ((float) this->_value / (1 << _bits));
 }
 
 int Fixed::toInt(void) const {

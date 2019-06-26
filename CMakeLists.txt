@@ -19,8 +19,8 @@ add_executable(d00e02
         Day00/ex02/Account.class.hpp
         Day00/ex02/tests.cpp)
 add_executable(d01e00
-        Day01/ex00/pony.hpp
-        Day01/ex00/pony.cpp
+        Day01/ex00/Pony.hpp
+        Day01/ex00/Pony.cpp
         Day01/ex00/main.cpp)
 add_executable(d01e01
         Day01/ex01/ex01.cpp

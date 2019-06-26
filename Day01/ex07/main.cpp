@@ -16,7 +16,7 @@ int main( int ac, char *av[])
 	{
 		std::ifstream	f1;
 		f1.open(av[1]);
-		if (f1.bad() || f1.fail() || !f1.is_open())
+		if (!f1.good() || !f1.is_open())
 		{
 			std::cout << "ERROR" << std::endl;
 			return (1);
@@ -33,7 +33,7 @@ int main( int ac, char *av[])
 		std::string		newfilestr;
 		filename += ".replace";
 		std::ofstream	f2(filename);
-		if (f2.bad() ||  f2.fail())
+		if (!f2.good() || !f1.is_open())
 			return (3);
 		while (getline(f1, line))
 		{

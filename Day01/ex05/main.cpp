@@ -13,6 +13,7 @@ int main()
 	std::cout << std::uppercase << bob.identify() << std::endl;
 	std::cout << bob.getBrain().identify() << std::endl;
 
-	std::cout << bob.getBrain().getMass() << std::endl;
+	std::cout << "This is mass of a Brain(Class, not body part) - "
+	<< bob.getBrain().getMass() << std::endl;
 	return 0;
 }
