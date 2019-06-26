@@ -6,8 +6,27 @@
 #define FIXED_HPP
 
 
-class Fixed
-{
+class Fixed {
+
+private:
+
+	int _value;
+	static const int _bits = 8;
+public:
+
+	Fixed();
+
+	Fixed(Fixed const &src);
+
+	~Fixed();
+
+	Fixed &operator=(Fixed const &rhs);
+
+	int getRawBits(void) const;
+
+	int getValue() const;
+
+	void setRawBits(int const raw);
 
 };
 

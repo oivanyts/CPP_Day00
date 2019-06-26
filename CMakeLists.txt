@@ -70,6 +70,14 @@ add_executable(d01e09
         Day01/ex09/main.cpp)
 
 add_executable(d01e10
-        Day01/ex10/main.cpp Day02/ex00/Fixed.cpp Day02/ex00/Fixed.hpp)
+        Day01/ex10/main.cpp)
+add_executable(d02e00
+        Day02/ex00/main.cpp
+        Day02/ex00/Fixed.cpp
+        Day02/ex00/Fixed.hpp)
 
+add_executable(d02e01
+        Day02/ex01/main.cpp
+        Day02/ex01/Fixed.cpp
+        Day02/ex01/Fixed.hpp)
 

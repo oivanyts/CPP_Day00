@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Fixed.hpp"
+#include <math.h>
 
 Fixed::Fixed() : _value(0)
 {
@@ -46,4 +47,26 @@ int Fixed::getValue() const
     return _value;
 }
 
+Fixed::Fixed(const int value) {
+	this->_value = value << _bits;
+	std::cout << "Int constructor called" << std::endl;
+}
 
+Fixed::Fixed(const float value) {
+	this->_value = roundf(value * (1 << _bits));
+	std::cout << "Float constructor called" << (value * (1 << _bits)) << std::endl;
+}
+
+float Fixed::toFloat(void) const {
+	return ((float)this->_value / (1 << _bits));
+}
+
+int Fixed::toInt(void) const {
+	return (static_cast<int>(this->_value >> _bits));
+}
+
+std::ostream &operator<<(std::ostream &o, Fixed const &rhs) {
+
+	o << rhs.toFloat();
+	return (o);
+}
