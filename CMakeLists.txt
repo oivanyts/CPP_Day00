@@ -81,3 +81,12 @@ add_executable(d02e01
         Day02/ex01/Fixed.cpp
         Day02/ex01/Fixed.hpp)
 
+add_executable(d02e02
+        Day02/ex02/main.cpp
+        Day02/ex02/Fixed.cpp
+        Day02/ex02/Fixed.hpp)
+
+add_executable(d02e04
+        Day02/ex04/main.cpp
+        Day02/ex04/Fixed.cpp
+        Day02/ex04/Fixed.hpp)
