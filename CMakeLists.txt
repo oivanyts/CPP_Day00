@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 98)
 
 #add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
 add_executable(d00e00
-        Day00/ex00/megaphone.cpp)
+        Day00/ex00/megaphone.cpp Day03/ex00/main.cpp )
 add_executable(d00e01
         Day00/ex01/src/main.cpp
         Day00/ex01/src/PhoneBook.cpp
@@ -74,7 +74,7 @@ add_executable(d01e10
 add_executable(d02e00
         Day02/ex00/main.cpp
         Day02/ex00/Fixed.cpp
-        Day02/ex00/Fixed.hpp)
+        Day02/ex00/Fixed.hpp Day03/ex00/FragTrap.cpp Day03/ex00/FragTrap.hpp)
 
 add_executable(d02e01
         Day02/ex01/main.cpp
@@ -90,3 +90,81 @@ add_executable(d02e04
         Day02/ex04/main.cpp
         Day02/ex04/Fixed.cpp
         Day02/ex04/Fixed.hpp)
+
+add_executable(d03e00
+        Day03/ex00/FragTrap.cpp
+        Day03/ex00/FragTrap.hpp
+        Day03/ex00/main.cpp)
+
+add_executable(d03e01
+        Day03/ex01/FragTrap.cpp
+        Day03/ex01/FragTrap.hpp
+        Day03/ex01/main.cpp Day03/ex01/ScavTrap.cpp Day03/ex01/ScavTrap.hpp)
+
+add_executable(d03e02
+        Day03/ex02/ClapTrap.cpp
+        Day03/ex02/ClapTrap.hpp
+        Day03/ex02/FragTrap.hpp
+        Day03/ex02/FragTrap.cpp
+        Day03/ex02/ScavTrap.cpp
+        Day03/ex02/ScavTrap.hpp
+        Day03/ex02/main.cpp)
+
+add_executable(d03e03
+        Day03/ex03/ClapTrap.cpp
+        Day03/ex03/ClapTrap.hpp
+        Day03/ex03/FragTrap.hpp
+        Day03/ex03/FragTrap.cpp
+        Day03/ex03/ScavTrap.cpp
+        Day03/ex03/ScavTrap.hpp
+        Day03/ex03/main.cpp Day03/ex03/NinjaTrap.cpp Day03/ex03/NinjaTrap.hpp)
+add_executable(d03e04
+        Day03/ex04/ClapTrap.hpp
+        Day03/ex04/ClapTrap.cpp
+        Day03/ex04/ScavTrap.hpp
+        Day03/ex04/ScavTrap.cpp
+        Day03/ex04/FragTrap.cpp
+        Day03/ex04/FragTrap.hpp
+        Day03/ex04/NinjaTrap.cpp
+        Day03/ex04/NinjaTrap.hpp
+        Day03/ex04/SuperTrap.cpp
+        Day03/ex04/SuperTrap.hpp
+        Day03/ex04/main.cpp)
+
+
+add_executable(d04e00
+        Day04/ex00/Sorcerer.cpp
+        Day04/ex00/Sorcerer.hpp
+        Day04/ex00/Victim.cpp
+        Day04/ex00/Victim.hpp
+        Day04/ex00/Peon.cpp
+        Day04/ex00/Peon.hpp
+        Day04/ex00/main.cpp)
+
+add_executable(d04e01
+        Day04/ex01/AWeapon.cpp
+        Day04/ex01/AWeapon.hpp
+        Day04/ex01/PlasmaRifle.cpp
+        Day04/ex01/PlasmaRifle.hpp
+        Day04/ex01/PowerFist.cpp
+        Day04/ex01/PowerFist.hpp
+        Day04/ex01/Enemy.cpp
+        Day04/ex01/Enemy.hpp
+        Day04/ex01/SuperMutant.cpp
+        Day04/ex01/SuperMutant.hpp
+        Day04/ex01/RadScorpion.cpp
+        Day04/ex01/RadScorpion.hpp
+        Day04/ex01/main.cpp
+        Day04/ex01/Character.cpp
+        Day04/ex01/Character.hpp)
+add_executable(d04e02
+        Day04/ex02/Squad.cpp
+        Day04/ex02/Squad.hpp
+        Day04/ex02/TacticalMarine.cpp
+        Day04/ex02/TacticalMarine.hpp
+        Day04/ex02/AssaultTerminator.cpp
+        Day04/ex02/AssaultTerminator.hpp
+        Day04/ex02/ISpaceMarine.hpp
+        Day04/ex02/ISquad.hpp
+        Day04/ex02/main.cpp)
+
