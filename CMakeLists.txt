@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.14)
 project(CPP_Day00)
 set(CMAKE_CXX_COMPILER clang++)
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wpedantic")
 set(CMAKE_CXX_STANDARD 98)
 
 #add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
 add_executable(d00e00
-        Day00/ex00/megaphone.cpp Day03/ex00/main.cpp )
+        Day00/ex00/megaphone.cpp Day03/ex00/main.cpp Day08/ex00/main.cpp)
 add_executable(d00e01
         Day00/ex01/src/main.cpp
         Day00/ex01/src/PhoneBook.cpp
@@ -167,4 +167,36 @@ add_executable(d04e02
         Day04/ex02/ISpaceMarine.hpp
         Day04/ex02/ISquad.hpp
         Day04/ex02/main.cpp)
+add_executable(d05e00
+        Day05/ex00/Bureaucrat.cpp Day05/ex00/Bureaucrat.hpp Day05/ex00/main.cpp)
+
+add_executable(d05e01
+        Day05/ex01/Bureaucrat.cpp
+        Day05/ex01/Bureaucrat.hpp
+        Day05/ex01/Form.cpp
+        Day05/ex01/Form.hpp
+        Day05/ex01/main.cpp)
+
+add_executable(d06e00
+        Day06/ex00/main.cpp Day06/ex00/main.cpp Day06/ex00/Convertor.cpp Day06/ex00/Convertor.hpp)
+
+add_executable(d06e01 Day06/ex01/main.cpp)
+
+add_executable(d06e02 Day06/ex02/main.cpp Day06/ex02/Base.cpp Day06/ex02/Base.hpp)
+
+add_executable(d07e00
+        Day07/ex00/main.cpp)
+
+add_executable(d07e01 Day07/ex01/iter.cpp)
+
+
+add_executable(d07e02 Day07/ex02/Array.hpp Day07/ex02/main.cpp)
+
+
+add_executable(d08e00
+        Day08/ex00/easyfind.hpp
+        Day08/ex00/main.cpp)
+
+
+
 

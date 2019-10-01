@@ -36,9 +36,9 @@ Fixed::Fixed(const float value) {
 	this->_value = roundf(value * (1 << _bits));
 }
 
-float Fixed::toFloat(void) const {
-	return ((float) this->_value / (1 << _bits));
-}
+//float Fixed::toFloat(void) const {
+//	return ((float) this->_value / (1 << _bits));
+//}
 
 int Fixed::toInt(void) const {
 	return (static_cast<int>(this->_value >> _bits));

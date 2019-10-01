@@ -7,7 +7,7 @@
 
 void	Contact::setField( u_int8_t n, std::string &data)
 {
-//	fitField(data);
+//	fitField(_data);
 	switch (n)
 	{
 		case 0:

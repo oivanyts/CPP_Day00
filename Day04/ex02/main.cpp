@@ -9,10 +9,12 @@
 #include "TacticalMarine.hpp"
 #include "AssaultTerminator.hpp"
 
-int main() {
+
+int main()
+{
 	ISpaceMarine* bob = new TacticalMarine;
 	ISpaceMarine* jim = new AssaultTerminator;
-	Squad* vlc = new Squad;
+	ISquad* vlc = new Squad;
 	vlc->push(bob);
 	vlc->push(jim);
 	for (int i = 0; i < vlc->getCount(); ++i)
@@ -22,15 +24,20 @@ int main() {
 		cur->rangedAttack();
 		cur->meleeAttack();
 	}
-	Squad bb  = *vlc;
+	Squad		test, *test1;
+
+	test.push(bob);
+	test.push(jim);
+	test1 = new Squad(test);
 	delete vlc;
-	for (int i = 0; i < bb.getCount(); ++i)
+	for (int i = 0; i < test1->getCount(); ++i)
 	{
-		ISpaceMarine *cur = bb.getUnit(i);
+		ISpaceMarine *cur = test1->getUnit(i);
 		cur->battleCry();
 		cur->rangedAttack();
 		cur->meleeAttack();
 	}
+	delete test1;
 	system("leaks -q d04e02");
 	return 0;
 }
