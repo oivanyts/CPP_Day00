@@ -29,14 +29,7 @@ NinjaTrap &NinjaTrap::operator=(NinjaTrap const &rhs) {
 	return *this;
 }
 
-NinjaTrap::NinjaTrap(std::string const &name) : ClapTrap(name),
-												_hitPoints(60),
-												_maxHitPoints(60),
-												_energyPoints(120),
-												_maxEnergyPoints(120),
-												_meleeAttackDamage(60),
-												_rangedAttackDamage(5),
-												_armorDamageReduction(0)
+NinjaTrap::NinjaTrap(std::string const &name) : ClapTrap(name, 1,60, 60, 120, 120, 60, 5, 0)
 {
 	std::cout << " ClapTrap: " << _name << " created" << std::endl;
 	funk[0] = &ClapTrap::rangedAttack;

@@ -8,15 +8,8 @@
 
 ScavTrap::ScavTrap() {}
 
-ScavTrap::ScavTrap(std::string name) : 	ClapTrap(name),
-										  _hitPoints(100),
-										  _maxHitPoints(100),
-										  _energyPoints(50),
-										  _maxEnergyPoints(12),
-										  _meleeAttackDamage(20),
-										  _rangedAttackDamege(15),
-										  _armorDamageReduction(3) {
-
+ScavTrap::ScavTrap(std::string name) : 	ClapTrap(name, 1, 100, 100, 50, 12, 20, 15, 3)
+{
 	std::cout << " ScavTrap: " << _name << " created" << std::endl;
 }
 

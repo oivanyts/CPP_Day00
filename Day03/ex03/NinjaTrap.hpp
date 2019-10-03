@@ -30,15 +30,7 @@ public:
 	void (ClapTrap::*funk[5])(std::string const & );
 private:
 	NinjaTrap();
-	std::string	_name;
-	uint16_t	_level;
-	uint16_t 	_hitPoints;
-	uint16_t 	_maxHitPoints;
-	uint16_t	_energyPoints;
-	uint16_t	_maxEnergyPoints;
-	uint16_t	_meleeAttackDamage;
 	uint16_t	_rangedAttackDamage;
-	uint16_t	_armorDamageReduction;
 
 };
 

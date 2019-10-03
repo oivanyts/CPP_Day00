@@ -7,14 +7,7 @@
 
 FragTrap::FragTrap() : ClapTrap() {}
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name),
-										_hitPoints(100),
-									   	_maxHitPoints(100),
-									   	_energyPoints(100),
-									   	_maxEnergyPoints(100),
-									   	_meleeAttackDamage(30),
-									   	_rangedAttackDamege(20),
-									   	_armorDamageReduction(5)
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 1, 100, 100, 100, 100, 30, 20, 5)
 									   	{
 	static std::string	start[] = {
 			"Hey everybody! Check out my package!",
@@ -35,7 +28,7 @@ FragTrap::FragTrap(FragTrap const &src) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << " ClapTrap: " << _name << " destroyed" << std::endl;
+	std::cout << " FragTrap: " << _name << " destroyed" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &rhs)

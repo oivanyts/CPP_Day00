@@ -12,7 +12,7 @@ Fixed::Fixed() : _value(0)
 
 Fixed::~Fixed()
 {
-	std::cout << "DefDestructor" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
 
 int Fixed::getRawBits( void ) const

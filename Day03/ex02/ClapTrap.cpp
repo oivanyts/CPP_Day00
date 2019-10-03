@@ -7,6 +7,18 @@
 
 ClapTrap::ClapTrap() {}
 
+ClapTrap::ClapTrap(std::string name, uint16_t lvl, uint16_t HP, uint16_t maxHP, uint16_t energy, uint16_t maxEnergy,
+				   uint16_t meleeDamage, uint16_t rangeDamege, uint16_t armorReduction) :_name(name),
+										_level(lvl),
+										_hitPoints(HP),
+										_maxHitPoints(maxHP),
+										_energyPoints(energy),
+										_maxEnergyPoints(maxEnergy),
+										_meleeAttackDamage(meleeDamage),
+										_rangedAttackDamege(rangeDamege),
+										_armorDamageReduction(armorReduction) {}
+
+
 ClapTrap::ClapTrap(std::string name) : _name(name),
 									   _level(1),
 									   _hitPoints(100),

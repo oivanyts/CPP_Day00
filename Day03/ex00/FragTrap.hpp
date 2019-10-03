@@ -31,7 +31,6 @@ public:
 	void		setName(const std::string &name);
 
 private:
-
 	FragTrap();
 	std::string	_name;
 	uint16_t	_level;

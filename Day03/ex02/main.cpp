@@ -9,8 +9,6 @@
 std::string getNames()
 {
 	std::string	names[] = {
-			"Claptrap",
-			"Cluck-Trap",
 			"CU5TM-TP",
 			"RT-FC",
 			"CLAP-9000",
