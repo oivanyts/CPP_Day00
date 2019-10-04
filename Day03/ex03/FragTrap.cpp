@@ -28,7 +28,7 @@ FragTrap::FragTrap(FragTrap const &src) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << " FragTrap: " << _name << " destroyed" << std::endl;
+	std::cout << "Destructor Called: [FragTrap]" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &rhs)
@@ -41,10 +41,10 @@ FragTrap &FragTrap::operator=(FragTrap const &rhs)
 	this->_hitPoints = rhs._hitPoints;
 	this->_maxHitPoints = rhs._maxHitPoints;
 	this->_energyPoints = rhs._energyPoints;
-	this->_maxEnergyPoints = rhs._maxEnergyPoints;
-	this->_meleeAttackDamage = rhs._meleeAttackDamage;
-	this->_rangedAttackDamege = rhs._rangedAttackDamege;
-	this->_armorDamageReduction = rhs._armorDamageReduction;
+	this->_maxEnergy = rhs._maxEnergy;
+	this->_meleeAttack = rhs._meleeAttack;
+	this->_rangedAttack = rhs._rangedAttack;
+	this->_armorReduction = rhs._armorReduction;
 	return *this;
 }
 

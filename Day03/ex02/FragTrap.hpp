@@ -7,7 +7,6 @@
 
 #include <cstdint>
 #include <string>
-#include <zconf.h>
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap {

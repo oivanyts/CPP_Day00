@@ -4,19 +4,12 @@
 
 #include <iostream>
 #include "ScavTrap.hpp"
-#include "../ex02/ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() {}
 
-ScavTrap::ScavTrap(std::string name) : 	ClapTrap(name),
-										  _hitPoints(100),
-										  _maxHitPoints(100),
-										  _energyPoints(50),
-										  _maxEnergyPoints(12),
-										  _meleeAttackDamage(20),
-										  _rangedAttackDamege(15),
-										  _armorDamageReduction(3) {
-
+ScavTrap::ScavTrap(std::string name) : 	ClapTrap(name, 1, 100, 100, 50, 12, 20, 15, 3)
+{
 	std::cout << " ScavTrap: " << _name << " created" << std::endl;
 }
 
@@ -39,10 +32,10 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
 	this->_hitPoints = rhs._hitPoints;
 	this->_maxHitPoints = rhs._maxHitPoints;
 	this->_energyPoints = rhs._energyPoints;
-	this->_maxEnergyPoints = rhs._maxEnergyPoints;
-	this->_meleeAttackDamage = rhs._meleeAttackDamage;
-	this->_rangedAttackDamege = rhs._rangedAttackDamege;
-	this->_armorDamageReduction = rhs._armorDamageReduction;
+	this->_maxEnergy = rhs._maxEnergy;
+	this->_meleeAttack = rhs._meleeAttack;
+	this->_rangedAttack = rhs._rangedAttack;
+	this->_armorReduction = rhs._armorReduction;
 	return *this;
 }
 

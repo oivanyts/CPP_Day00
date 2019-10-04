@@ -5,6 +5,7 @@
 #include <iostream>
 #include "NinjaTrap.hpp"
 
+
 NinjaTrap::NinjaTrap() {}
 
 NinjaTrap::NinjaTrap(NinjaTrap const &src) {
@@ -22,16 +23,16 @@ NinjaTrap &NinjaTrap::operator=(NinjaTrap const &rhs) {
 	this->_hitPoints = rhs._hitPoints;
 	this->_maxHitPoints = rhs._maxHitPoints ;
 	this->_energyPoints = rhs._energyPoints;
-	this->_maxEnergyPoints = rhs._maxEnergyPoints;
-	this->_meleeAttackDamage = rhs._meleeAttackDamage;
+	this->_maxEnergy = rhs._maxEnergy;
+	this->_meleeAttack = rhs._meleeAttack;
 	this->_rangedAttackDamage = rhs._rangedAttackDamage;
-	this->_armorDamageReduction = rhs._armorDamageReduction;
+	this->_armorReduction = rhs._armorReduction;
 	return *this;
 }
 
 NinjaTrap::NinjaTrap(std::string const &name) : ClapTrap(name, 1,60, 60, 120, 120, 60, 5, 0)
 {
-	std::cout << " ClapTrap: " << _name << " created" << std::endl;
+	std::cout << " NinjaTrap: " << _name << " created" << std::endl;
 	funk[0] = &ClapTrap::rangedAttack;
 	funk[1] = &ClapTrap::rangedCritAttack;
 	funk[2] = &ClapTrap::meleeAttack;
@@ -46,9 +47,9 @@ void NinjaTrap::ninjaShoebox(NinjaTrap &attack)
 	int num = rand() % 5;
 	(this->*funk[num])(attack.getName());
 	if (num < 2)
-		attack.takeDamage(attack.getRangedAttackDamage());
+		attack.takeDamage(attack.getRangedAttack());
 	else
-		attack.takeDamage(attack.getMeleeAttackDamage());
+		attack.takeDamage(attack.getMeleeAttack());
 }
 
 void NinjaTrap::ninjaShoebox(ClapTrap &attack)
@@ -56,9 +57,9 @@ void NinjaTrap::ninjaShoebox(ClapTrap &attack)
 	int num = rand() % 5;
 	(this->*funk[num])(attack.getName());
 	if (num < 2)
-		attack.takeDamage(attack.getRangedAttackDamage());
+		attack.takeDamage(attack.getRangedAttack());
 	else
-		attack.takeDamage(attack.getMeleeAttackDamage());
+		attack.takeDamage(attack.getMeleeAttack());
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap &attack)
@@ -67,9 +68,9 @@ void NinjaTrap::ninjaShoebox(ScavTrap &attack)
 	int num = rand() % 5;
 	(this->*funk[num])(attack.getName());
 	if (num < 2)
-		attack.takeDamage(attack.getRangedAttackDamage());
+		attack.takeDamage(attack.getRangedAttack());
 	else
-		attack.takeDamage(attack.getMeleeAttackDamage());
+		attack.takeDamage(attack.getMeleeAttack());
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap &attack)
@@ -78,8 +79,13 @@ void NinjaTrap::ninjaShoebox(FragTrap &attack)
 	int num = rand() % 5;
 	(this->*funk[num])(attack.getName());
 	if (num < 2)
-		attack.takeDamage(attack.getRangedAttackDamage());
+		attack.takeDamage(attack.getRangedAttack());
 	else
-		attack.takeDamage(attack.getMeleeAttackDamage());
+		attack.takeDamage(attack.getMeleeAttack());
 
+}
+
+uint16_t NinjaTrap::getRangedAttack() const
+{
+	return _rangedAttack;
 }

@@ -5,9 +5,7 @@
 #ifndef CPP_DAY00_FRAGTRAP_HPP
 #define CPP_DAY00_FRAGTRAP_HPP
 
-#include <cstdint>
 #include <string>
-#include <zconf.h>
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap {

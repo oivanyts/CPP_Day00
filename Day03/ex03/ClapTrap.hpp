@@ -37,16 +37,19 @@ public:
 	void		beRepaired(unsigned int amount);
 
 	ClapTrap();
+	uint16_t getMeleeAttack() const;
+	const std::string &getName() const;
+	uint16_t getRangedAttack() const;
 protected:
 	std::string	_name;
 	uint16_t	_level;
 	uint16_t 	_hitPoints;
 	uint16_t 	_maxHitPoints;
 	uint16_t	_energyPoints;
-	uint16_t	_maxEnergyPoints;
-	uint16_t	_meleeAttackDamage;
-	uint16_t	_rangedAttackDamege;
-	uint16_t	_armorDamageReduction;
+	uint16_t	_maxEnergy;
+	uint16_t	_meleeAttack;
+	uint16_t	_rangedAttack;
+	uint16_t	_armorReduction;
 };
 
 

@@ -5,16 +5,11 @@
 #include <iostream>
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap() {}
+FragTrap::FragTrap() : ClapTrap() {
+	std::cout << " FragTrap(def): " << _name << " created" << std::endl;
+}
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name),
-										_hitPoints(100),
-									   	_maxHitPoints(100),
-									   	_energyPoints(100),
-									   	_maxEnergyPoints(100),
-									   	_meleeAttackDamage(30),
-									   	_rangedAttackDamege(20),
-									   	_armorDamageReduction(5)
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 1, 100, 100, 100, 100, 30, 20, 5)
 									   	{
 	static std::string	start[] = {
 			"Hey everybody! Check out my package!",
@@ -35,7 +30,7 @@ FragTrap::FragTrap(FragTrap const &src) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << " ClapTrap: " << _name << " destroyed" << std::endl;
+	std::cout << "Destructor Called: [FragTrap] " << _name <<std::endl;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &rhs)
@@ -48,10 +43,10 @@ FragTrap &FragTrap::operator=(FragTrap const &rhs)
 	this->_hitPoints = rhs._hitPoints;
 	this->_maxHitPoints = rhs._maxHitPoints;
 	this->_energyPoints = rhs._energyPoints;
-	this->_maxEnergyPoints = rhs._maxEnergyPoints;
-	this->_meleeAttackDamage = rhs._meleeAttackDamage;
-	this->_rangedAttackDamege = rhs._rangedAttackDamege;
-	this->_armorDamageReduction = rhs._armorDamageReduction;
+	this->_maxEnergy = rhs._maxEnergy;
+	this->_meleeAttack = rhs._meleeAttack;
+	this->_rangedAttack = rhs._rangedAttack;
+	this->_armorReduction = rhs._armorReduction;
 	return *this;
 }
 
@@ -61,10 +56,10 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 		outOfEnergie();
 		return ;
 	}
-	void (FragTrap::*funk[5])(std::string const & );
-	funk[0] = &FragTrap::rangedAttack;
-	funk[1] = &FragTrap::meleeAttack;
-	funk[2] = &FragTrap::meleeCritAttack;
+	void (ClapTrap::*funk[5])(std::string const & );
+	funk[0] = &ClapTrap::rangedAttack;
+	funk[1] = &ClapTrap::meleeAttack;
+	funk[2] = &ClapTrap::meleeCritAttack;
 	funk[3] = &FragTrap::rangedCritAttack;
 	funk[4] = &FragTrap::headAttack;
 
@@ -75,5 +70,19 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 void FragTrap::outOfEnergie() const {
 	std::cout << _name << " is out of energie [" << _energyPoints << "/100]"
 	<< std::endl;
+}
+
+void	FragTrap::meleeAttack(std::string const &target)
+{
+	std::cout << "FragTrap "<< _name << "[" << _level <<"] >> *SLAPS "
+			  << target << " causing -" << this->_rangedAttack
+			  << "hp!" << std::endl;
+}
+
+void	FragTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "FragTrap "<< _name << "[" << _level <<"] >> *SLAPS "
+			  << target << " causing -" << this->_rangedAttack
+			  << "hp!" << std::endl;
 }
 

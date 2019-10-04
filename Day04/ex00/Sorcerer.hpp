@@ -22,7 +22,6 @@ public:
 	void		polymorph(Victim const &target) const;
 
 private:
-
 	Sorcerer();
 	std::string	_name;
 	std::string	_title;

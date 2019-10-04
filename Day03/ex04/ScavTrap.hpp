@@ -9,7 +9,7 @@
 #include <string>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : public virtual ClapTrap {
 
 public:
 
@@ -23,16 +23,6 @@ public:
 
 private:
 	ScavTrap();
-	std::string	_name;
-	uint16_t	_level;
-	uint16_t 	_hitPoints;
-	uint16_t 	_maxHitPoints;
-	uint16_t	_energyPoints;
-	uint16_t	_maxEnergyPoints;
-	uint16_t	_meleeAttackDamage;
-	uint16_t	_rangedAttackDamege;
-	uint16_t	_armorDamageReduction;
-
 };
 
 

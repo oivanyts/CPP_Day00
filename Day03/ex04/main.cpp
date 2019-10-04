@@ -7,6 +7,7 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 std::string getNames()
 {
@@ -26,19 +27,14 @@ int main()
 	srand(time(nullptr) * time(nullptr));
 
 	std::cout << "FIGHT BEGINS"<< std::endl;
-	NinjaTrap    a(getNames());
-	NinjaTrap    b(getNames());
+	SuperTrap   	a(getNames());
+	NinjaTrap   	b(getNames());
 
-	std::cout << std::endl << "First round!" << std::endl;
-	b.ninjaShoebox(a);
+	a.meleeAttack(b.getName());
+	a.rangedAttack(b.getName());
+
+	a.vaulthunter_dot_exe(b.getName());
 	a.ninjaShoebox(b);
 
-	std::cout << std::endl << "Second round!" << std::endl;
-	b.ninjaShoebox(a);
-	a.ninjaShoebox(b);
-
-	std::cout << std::endl << "Third round!" << std::endl;
-	b.ninjaShoebox(a);
-	a.ninjaShoebox(b);
 	return 0;
 }

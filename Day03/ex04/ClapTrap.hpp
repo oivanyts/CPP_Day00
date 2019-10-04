@@ -2,20 +2,31 @@
 // Created by Oleh IVANYTSKYI on 2019-06-28.
 //
 
-#ifndef CPP_DAY00_CLAPTRAP_HPP
-#define CPP_DAY00_CLAPTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 
 #include <cstdint>
 #include <string>
 
+
+
 class ClapTrap {
 
 public:
 
+	ClapTrap(std::string name,
+			uint16_t lvl,
+			uint16_t HP,
+			uint16_t maxHP,
+			uint16_t energy,
+			uint16_t maxEnergy,
+			uint16_t meleeDamage,
+			uint16_t rangeDamege,
+			uint16_t armorReduction);
 	ClapTrap(std::string	name);
 	ClapTrap(ClapTrap const &src);
-	~ClapTrap();
+	virtual ~ClapTrap();
 	ClapTrap &operator=(ClapTrap const &rhs);
 
 	void		setName(const std::string &name);
@@ -28,26 +39,19 @@ public:
 	void		beRepaired(unsigned int amount);
 
 	ClapTrap();
-private:
-	std::string	_name;
-public:
+	uint16_t getMeleeAttack() const;
 	const std::string &getName() const;
-
-private:
+	uint16_t getRangedAttack() const;
+protected:
+	std::string	_name;
 	uint16_t	_level;
 	uint16_t 	_hitPoints;
 	uint16_t 	_maxHitPoints;
 	uint16_t	_energyPoints;
-	uint16_t	_maxEnergyPoints;
-	uint16_t	_meleeAttackDamage;
-	uint16_t	_rangedAttackDamege;
-public:
-	uint16_t getMeleeAttackDamage() const;
-
-	uint16_t getRangedAttackDamage() const;
-
-private:
-	uint16_t	_armorDamageReduction;
+	uint16_t	_maxEnergy;
+	uint16_t	_meleeAttack;
+	uint16_t	_rangedAttack;
+	uint16_t	_armorReduction;
 };
 
 

@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 98)
 
 #add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
 add_executable(d00e00
-        Day00/ex00/megaphone.cpp Day03/ex00/main.cpp Day08/ex00/main.cpp)
+        Day00/ex00/megaphone.cpp Day03/ex00/main.cpp Day08/ex00/main.cpp Day04/ex03/AMateria.cpp Day04/ex03/AMateria.h)
 add_executable(d00e01
         Day00/ex01/src/main.cpp
         Day00/ex01/src/PhoneBook.cpp
@@ -117,7 +117,10 @@ add_executable(d03e03
         Day03/ex03/FragTrap.cpp
         Day03/ex03/ScavTrap.cpp
         Day03/ex03/ScavTrap.hpp
-        Day03/ex03/main.cpp Day03/ex03/NinjaTrap.cpp Day03/ex03/NinjaTrap.hpp)
+        Day03/ex03/main.cpp
+        Day03/ex03/NinjaTrap.cpp
+        Day03/ex03/NinjaTrap.hpp)
+
 add_executable(d03e04
         Day03/ex04/ClapTrap.hpp
         Day03/ex04/ClapTrap.cpp
@@ -167,6 +170,9 @@ add_executable(d04e02
         Day04/ex02/ISpaceMarine.hpp
         Day04/ex02/ISquad.hpp
         Day04/ex02/main.cpp)
+add_executable(d04e03
+        Day04/ex03/AMateria.cpp
+        Day04/ex03/AMateria.h Day04/ex03/Ice.cpp Day04/ex03/Ice.h Day04/ex03/Cure.cpp Day04/ex03/Cure.h Day04/ex03/Character.cpp Day04/ex03/Character.h Day04/ex03/MateriaSource.cpp Day04/ex03/MateriaSource.h Day04/ex03/ICharacter.h Day04/ex03/IMateriaSource.h Day04/ex03/main.cpp)
 add_executable(d05e00
         Day05/ex00/Bureaucrat.cpp Day05/ex00/Bureaucrat.hpp Day05/ex00/main.cpp)
 

@@ -15,7 +15,6 @@ class NinjaTrap : public ClapTrap {
 
 public:
 
-
 	NinjaTrap(std::string const &name);
 	NinjaTrap(NinjaTrap const &src);
 	~NinjaTrap();
@@ -25,8 +24,7 @@ public:
 	void 		ninjaShoebox(ClapTrap &attack);
 	void 		ninjaShoebox(ScavTrap &attack);
 	void 		ninjaShoebox(FragTrap &attack);
-
-
+	uint16_t getRangedAttack() const;
 	void (ClapTrap::*funk[5])(std::string const & );
 private:
 	NinjaTrap();
