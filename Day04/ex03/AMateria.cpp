@@ -3,9 +3,8 @@
 //
 
 #include "AMateria.h"
-#include "ICharacter.h"
 
-AMateria::AMateria() : xp_(0), type_((std::string &)"")
+AMateria::AMateria()
 {
 
 }
@@ -42,11 +41,10 @@ std::string const &AMateria::getType() const
 
 unsigned int AMateria::getXP() const
 {
-	return 0;
+	return xp_;
 }
 
-void AMateria::use(ICharacter &target)
+void AMateria::use(ICharacter &)
 {
-	(void)target;
 	xp_ += 10;
 }

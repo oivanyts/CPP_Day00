@@ -13,13 +13,17 @@ class Ice : public AMateria
 
 public:
 	Ice();
-
 	~Ice();
-
 	Ice(Ice const &src);
-
 	Ice &operator=(Ice const &rhs);
 
+	virtual const std::string &getType() const;
+
+	virtual unsigned int getXP() const;
+
+	virtual AMateria *clone() const;
+
+	virtual void use(ICharacter &target);
 
 
 private:

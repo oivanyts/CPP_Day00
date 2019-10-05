@@ -4,7 +4,7 @@ set(CMAKE_CXX_COMPILER clang++)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wpedantic")
 set(CMAKE_CXX_STANDARD 98)
 
-#add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
+add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
 add_executable(d00e00
         Day00/ex00/megaphone.cpp Day03/ex00/main.cpp Day08/ex00/main.cpp Day04/ex03/AMateria.cpp Day04/ex03/AMateria.h)
 add_executable(d00e01
@@ -172,7 +172,33 @@ add_executable(d04e02
         Day04/ex02/main.cpp)
 add_executable(d04e03
         Day04/ex03/AMateria.cpp
-        Day04/ex03/AMateria.h Day04/ex03/Ice.cpp Day04/ex03/Ice.h Day04/ex03/Cure.cpp Day04/ex03/Cure.h Day04/ex03/Character.cpp Day04/ex03/Character.h Day04/ex03/MateriaSource.cpp Day04/ex03/MateriaSource.h Day04/ex03/ICharacter.h Day04/ex03/IMateriaSource.h Day04/ex03/main.cpp)
+        Day04/ex03/AMateria.h
+        Day04/ex03/Ice.cpp
+        Day04/ex03/Ice.h
+        Day04/ex03/Cure.cpp
+        Day04/ex03/Cure.h
+        Day04/ex03/Character.cpp
+        Day04/ex03/Character.h
+        Day04/ex03/MateriaSource.cpp
+        Day04/ex03/MateriaSource.h
+        Day04/ex03/ICharacter.h
+        Day04/ex03/IMateriaSource.h
+        Day04/ex03/main.cpp)
+
+add_executable(d04e04
+        Day04/ex04/lasers/DeepCoreMiner.cpp
+        Day04/ex04/lasers/DeepCoreMiner.h
+        Day04/ex04/lasers/StripMiner.cpp
+        Day04/ex04/lasers/StripMiner.h
+        Day04/ex04/asteroids/AsteroKreog.cpp
+        Day04/ex04/asteroids/AsteroKreog.h
+        Day04/ex04/asteroids/KoalaSteroid.cpp
+        Day04/ex04/asteroids/KoalaSteroid.h
+        Day04/ex04/MiningBarge.cpp
+        Day04/ex04/MiningBarge.h
+        Day04/ex04/IAsteroid.h
+        Day04/ex04/IMiningLaser.h
+        Day04/ex04/main.cpp)
 add_executable(d05e00
         Day05/ex00/Bureaucrat.cpp Day05/ex00/Bureaucrat.hpp Day05/ex00/main.cpp)
 

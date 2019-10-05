@@ -38,6 +38,5 @@ int main()
 		cur->meleeAttack();
 	}
 	delete test1;
-	system("leaks -q d04e02");
 	return 0;
 }

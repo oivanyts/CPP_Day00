@@ -20,6 +20,14 @@ public:
 
 	Cure &operator=(Cure const &rhs);
 
+	virtual const std::string &getType() const;
+
+	virtual unsigned int getXP() const;
+
+	virtual AMateria *clone() const;
+
+	virtual void use(ICharacter &target);
+
 private:
 
 };

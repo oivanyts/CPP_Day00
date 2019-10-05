@@ -8,31 +8,27 @@
 
 #include <string>
 #include "ICharacter.h"
-#include "Ice.h"
-#include "Cure.h"
-
 
 class AMateria
 {
 
 public:
-	~AMateria();
+	virtual ~AMateria();
 
 	AMateria();
 
 	AMateria(AMateria const &src);
 	AMateria(std::string const & type);
 
-	std::string const & getType() const; //Returns the materia type_
-	unsigned int getXP() const; //Returns the Materia's XP
+	virtual std::string const & getType() const; //Returns the materia type_
+	virtual unsigned int getXP() const; //Returns the Materia's XP
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter & target);
 	AMateria &operator=(AMateria const &rhs);
 
 private:
 	unsigned int xp_;
-	std::string &type_;
-
+	std::string  type_;
 };
 
 

@@ -8,6 +8,8 @@
 #include <string>
 #include "AMateria.h"
 
+class AMateria;
+
 class ICharacter
 {
 public:

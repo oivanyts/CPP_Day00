@@ -19,10 +19,12 @@ public:
 	MateriaSource(MateriaSource const &src);
 
 	MateriaSource	&operator=(MateriaSource const &rhs);
-	void			learnMateria(AMateria*);
+	void			learnMateria(AMateria *src);
 	AMateria*		createMateria(std::string const & type);
 
 private:
+	AMateria	*mem_[4];
+	int 		count;
 
 };
 

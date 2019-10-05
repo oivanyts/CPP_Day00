@@ -5,7 +5,9 @@
 #ifndef CPP_DAY00_CHARACTER_H
 #define CPP_DAY00_CHARACTER_H
 
-
+#include "Ice.h"
+#include "Cure.h"
+#include "AMateria.h"
 #include "ICharacter.h"
 
 class Character : public ICharacter
@@ -13,12 +15,23 @@ class Character : public ICharacter
 
 public:
 	Character();
-	~Character();
+	Character(std::string const &name);
 	Character(Character const &src);
 	Character &operator=(Character const &rhs);
 
+	~Character();
+
+	std::string const &getName() const;
+
+	void equip(AMateria *m);
+	void unequip(int idx);
+	void use(int idx, ICharacter &target);
+
 private:
-	AMateria pocket[4];
+	std::string	const name_;
+	AMateria	*pocket_[4];
+	int			count;
+
 };
 
 
