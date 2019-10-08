@@ -4,7 +4,6 @@ set(CMAKE_CXX_COMPILER clang++)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wpedantic")
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(CPP_Day00 MVC/main.cpp Day00/ex02/Account.class.cpp)
 add_executable(d00e00
         Day00/ex00/megaphone.cpp Day03/ex00/main.cpp Day08/ex00/main.cpp Day04/ex03/AMateria.cpp Day04/ex03/AMateria.h)
 add_executable(d00e01
@@ -208,6 +207,14 @@ add_executable(d05e01
         Day05/ex01/Form.cpp
         Day05/ex01/Form.hpp
         Day05/ex01/main.cpp)
+
+add_executable(d05e02
+        Day05/ex02/Bureaucrat.cpp
+        Day05/ex02/Bureaucrat.hpp
+        Day05/ex02/Form.cpp
+        Day05/ex02/Form.hpp
+        Day05/ex02/main.cpp Day05/ex02/ShrubberyCreationForm.cpp Day05/ex02/ShrubberyCreationForm.h Day05/ex02/PresidentialPardonForm.cpp Day05/ex02/PresidentialPardonForm.h Day05/ex02/RobotomyRequestForm.cpp Day05/ex02/RobotomyRequestForm.h)
+
 
 add_executable(d06e00
         Day06/ex00/main.cpp Day06/ex00/main.cpp Day06/ex00/Convertor.cpp Day06/ex00/Convertor.hpp)

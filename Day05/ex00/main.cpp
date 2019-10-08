@@ -1,41 +1,33 @@
+
 //
 // Created by Oleh IVANYTSKYI on 2019-07-02.
 //
-
 #include "Bureaucrat.hpp"
 
 int main()
 {
-	Bureaucrat b("Bob", 1);
-	std::cout << b << std::endl;
-
-	std::cout << " * Set grade" << std::endl;
-	b.setGrade(100);
-	std::cout << b << std::endl;
-
-	std::cout << " * Too low grade" << std::endl;
 	try {
-		Bureaucrat bLow("Alice", 420);
-	}
-	catch (Bureaucrat::GradeTooLowException &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+		Bureaucrat b("Bob", 1);
+		std::cout << b << std::endl;
+		std::cout << " * Set grade" << std::endl;
+		b.setGrade(150);
+		std::cout << b << std::endl
+				<< " * incrementing " << std::endl;
+		b.incGrade();
+		std::cout << b << std::endl
+				<< " * decrementing x2" << std::endl;
+		b.decGrade();
+		b.decGrade();
 
-	std::cout << " * Too high" << std::endl;
-	try {
+
+//		std::cout << " * Too low grade" << std::endl;
+//		Bureaucrat bLow("Alice", 420);
+
+		std::cout << " * Too high" << std::endl;
 		Bureaucrat bHigh("Peter", 0);
 	}
-	catch (Bureaucrat::GradeTooHighException &e)
+	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
-	}
-	for (int i = 0; i < 5; i++) {
-		try {
-			Bureaucrat bHigh("Peter", i * 30);
-		}
-		catch (Bureaucrat::GradeTooHighException &e) {
-			std::cout << e.what() << std::endl;
-		}
+		std::cout << "EXCEPTION: "<< e.what() << std::endl;
 	}
 }
