@@ -55,12 +55,14 @@ void Bureaucrat::setGrade(int grade)
 void Bureaucrat::signForm(Form &onSign)
 {
 
-	if (onSign.getSignGrade() >= _grade)
+	if (!onSign.isSign() && onSign.getSignGrade() >= _grade)
 	{
 		std::cout << "<" << _name <<"> signs <" <<
 		onSign.getName() << ">" << std::endl;
 		onSign.beSigned(*this);
 	}
+	else if (onSign.isSign())
+		std::cout << "<" << onSign.getName() << "> is already signed" << std::endl;
 	else
 		std::cout << "<" << _name <<"> cannot sign <" << onSign.getName()
 		<< "> because his grade is too low" << std::endl;

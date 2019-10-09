@@ -213,7 +213,43 @@ add_executable(d05e02
         Day05/ex02/Bureaucrat.hpp
         Day05/ex02/Form.cpp
         Day05/ex02/Form.hpp
-        Day05/ex02/main.cpp Day05/ex02/ShrubberyCreationForm.cpp Day05/ex02/ShrubberyCreationForm.h Day05/ex02/PresidentialPardonForm.cpp Day05/ex02/PresidentialPardonForm.h Day05/ex02/RobotomyRequestForm.cpp Day05/ex02/RobotomyRequestForm.h)
+        Day05/ex02/main.cpp
+        Day05/ex02/ShrubberyCreationForm.cpp
+        Day05/ex02/ShrubberyCreationForm.h
+        Day05/ex02/PresidentialPardonForm.cpp
+        Day05/ex02/PresidentialPardonForm.h
+        Day05/ex02/RobotomyRequestForm.cpp
+        Day05/ex02/RobotomyRequestForm.h)
+
+
+add_executable(d05e03
+        Day05/ex03/Bureaucrat.cpp
+        Day05/ex03/Bureaucrat.hpp
+        Day05/ex03/Form.cpp
+        Day05/ex03/Form.hpp
+        Day05/ex03/main.cpp
+        Day05/ex03/ShrubberyCreationForm.cpp
+        Day05/ex03/ShrubberyCreationForm.h
+        Day05/ex03/PresidentialPardonForm.cpp
+        Day05/ex03/PresidentialPardonForm.h
+        Day05/ex03/RobotomyRequestForm.cpp
+        Day05/ex03/RobotomyRequestForm.h Day05/ex03/Intern.cpp Day05/ex03/Intern.h)
+
+add_executable(d05e04
+        Day05/ex04/Bureaucrat.cpp
+        Day05/ex04/Bureaucrat.hpp
+        Day05/ex04/Form.cpp
+        Day05/ex04/Form.hpp
+        Day05/ex04/main.cpp
+        Day05/ex04/ShrubberyCreationForm.cpp
+        Day05/ex04/ShrubberyCreationForm.h
+        Day05/ex04/PresidentialPardonForm.cpp
+        Day05/ex04/PresidentialPardonForm.h
+        Day05/ex04/RobotomyRequestForm.cpp
+        Day05/ex04/RobotomyRequestForm.h
+        Day05/ex04/Intern.cpp
+        Day05/ex04/Intern.h Day05/ex04/OfficeBlock.cpp Day05/ex04/OfficeBlock.h)
+
 
 
 add_executable(d06e00

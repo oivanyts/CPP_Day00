@@ -4,24 +4,46 @@
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "PresidentialPardonForm.h"
+#include "ShrubberyCreationForm.h"
+#include "RobotomyRequestForm.h"
 
 int main()
 {
 	try
 	{
-		Form		a("form140", 140, 11);
-		Form		z("<TooLow ExGrade>", 140, 11111);
-		Form		x("<TooLow SignGrade>", 11111, 11);
-		Form		w("<TooHigh SignGrade>", 0, 11);
-		Form		y("<TooHigh ExGrade>", 11, 0);
-		Bureaucrat	b("buro150", 150);
+		PresidentialPardonForm	prForm("PresForm");
+		ShrubberyCreationForm	shrForm("ShrForm");
+		RobotomyRequestForm		robForm("RoboForm");
+
+		Bureaucrat	a("buro100", 100);
+		Bureaucrat	b("buro4", 4);
 		Bureaucrat	c("buro10", 10);
 
-		b.signForm(a);
-		std::cout << a << std::endl << b << std::endl;
+		a.signForm(prForm);
+		b.signForm(prForm);
+		c.signForm(prForm);
+		a.executeForm(prForm);
+		c.executeForm(prForm);
+		b.executeForm(prForm);
 
-		c.signForm(a);
-		std::cout << a << std::endl << c << std::endl;
+		a.signForm(shrForm);
+		b.signForm(shrForm);
+		c.signForm(shrForm);
+		a.executeForm(shrForm);
+		c.executeForm(shrForm);
+		b.executeForm(shrForm);
+
+		a.signForm(robForm);
+		b.signForm(robForm);
+		c.signForm(robForm);
+		a.executeForm(robForm);
+		c.executeForm(robForm);
+		b.executeForm(robForm);
+		std::cout << prForm;
+		std::cout << shrForm;
+		std::cout << robForm;
+
 
 	}
 	catch (std::exception &e)
