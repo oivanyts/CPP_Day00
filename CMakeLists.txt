@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wpedantic")
 set(CMAKE_CXX_STANDARD 98)
 
 add_executable(d00e00
-        Day00/ex00/megaphone.cpp Day03/ex00/main.cpp Day08/ex00/main.cpp Day04/ex03/AMateria.cpp Day04/ex03/AMateria.h)
+        Day00/ex00/megaphone.cpp)
 add_executable(d00e01
         Day00/ex01/src/main.cpp
         Day00/ex01/src/PhoneBook.cpp
@@ -271,6 +271,18 @@ add_executable(d07e02 Day07/ex02/Array.hpp Day07/ex02/main.cpp)
 add_executable(d08e00
         Day08/ex00/easyfind.hpp
         Day08/ex00/main.cpp)
+
+add_executable(d08e01
+        Day08/ex01/main.cpp Day08/ex01/Span.cpp Day08/ex01/Span.h)
+
+add_executable(d08e02
+        Day08/ex02/main.cpp Day08/ex02/MutantStack.h)
+
+add_executable(d08e03
+        Day08/ex03/main.cpp Day08/ex03/AInstructions.cpp Day08/ex03/AInstructions.h Day08/ex03/InstrCreator.cpp Day08/ex03/InstrCreator.h)
+
+
+
 
 
 

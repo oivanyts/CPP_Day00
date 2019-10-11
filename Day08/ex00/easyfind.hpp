@@ -15,31 +15,13 @@
 #include <exception>
 
 template <typename T>
-T	easyfind(T list, int value)
+int	easyfind(T obj, int value)
 {
-
-	std::list<int>::const_iterator			it = list.begin();
-	std::list<int>::const_iterator			ite = list.end();
-
-	ptrdiff_t	i = 0;
-
-	try
-	{
-		while (it != ite)
-		{
-			if (*it == value)
-				return (i);
-			it++;
-			i++;
-		}
-	}
-	catch (std::exception& e)
-	{
+	typename T::iterator iterator;
+	iterator = std::find(obj.begin(), obj.end(), value);
+	if (iterator == obj.end())
 		throw std::exception();
-	}
-	if (it != list.end())
-		return (i);
-	throw std::exception();
+	return (*iterator);
 }
 
 

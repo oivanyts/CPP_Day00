@@ -2,29 +2,32 @@
 // Created by Oleh IVANYTSKYI on 2019-07-06.
 //
 
+#include <deque>
 #include "easyfind.hpp"
 
 
 void
 testValue(int val)
 {
-    std::list<int>    lst;
+    std::deque<int>    lst;
 
-    lst.push_back(4);
-    lst.push_back(8);
-    lst.push_back(15);
-    lst.push_back(16);
-    lst.push_back(23);
-    lst.push_back(42);
+    lst.push_back(4);	// #0
+    lst.push_back(8);	// #1
+    lst.push_back(15);	// #2
+    lst.push_back(16);	// #3
+    lst.push_back(4);	// #4
+    lst.push_back(42);	// #5
+
 
     std::cout << val << " -> ";
     try
     {
-        easyfind(lst, val);
+    	int 	a =  easyfind(lst, val);
+        std::cout << a << std::endl;
     }
-    catch (std::string str)
+    catch (std::exception &)
     {
-        std::cout << str << std::endl;
+		std::cout << "couldn't find " << val << std::endl;
     }
 }
 
